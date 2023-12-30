@@ -1,6 +1,10 @@
 package com.casestudy.flightsearchapi.model;
-
-public class Ucuslar {
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.annotation.Id;
+@Document(collection = "ucuslar")
+public class Ucuslar
+{
+    @Id
     private String id;
     private String kalkisAlani;
     private String varisAlani;

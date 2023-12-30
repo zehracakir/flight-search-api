@@ -1,8 +1,11 @@
 package com.casestudy.flightsearchapi.model;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.annotation.Id;
 
+@Document(collection = "havaalanlari")
 public class Havaalanlari {
 
-
+    @Id
     private String id;
     private String sehir;
 
