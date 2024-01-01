@@ -4,20 +4,18 @@ import com.casestudy.flightsearchapi.model.UcusApiResponse;
 import com.casestudy.flightsearchapi.model.Ucuslar;
 import com.casestudy.flightsearchapi.service.UcuslarService;
 import org.bson.types.ObjectId;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
-//localhost:8080/ucuslar/id dedigimiz zaman ucus bilgilerine ulasabiliriz.
 @RestController
 @RequestMapping("/ucuslar")
-public class UcuslarAPIContoller
+public class UcuslarAPIController
 {
 
     UcuslarService ucuslarService;
-    public UcuslarAPIContoller(UcuslarService ucuslarService) {
+    public UcuslarAPIController(UcuslarService ucuslarService) {
         this.ucuslarService = ucuslarService;
     }
 
@@ -71,10 +69,10 @@ public class UcuslarAPIContoller
  public UcusApiResponse searchApiUcuslarDetails(
          @RequestParam String kalkisAlani,
          @RequestParam String varisAlani,
-         @RequestParam String kalkisTarih,
-         @RequestParam(required = false) String donusTarih
+         @RequestParam LocalDateTime kalkisTarih,
+         @RequestParam(required = false) LocalDateTime donusTarih
  ) {
-     if (donusTarih != null && donusTarih.isEmpty()) {
+     if (donusTarih != null) {
          donusTarih = null;
      }
 
