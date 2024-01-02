@@ -19,4 +19,7 @@ public class FlightSearchApiApplication {
 	public RestTemplate restTemplate() {
 		return new RestTemplate();
 	}
+
+
+
 }

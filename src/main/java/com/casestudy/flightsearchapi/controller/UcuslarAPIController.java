@@ -8,7 +8,22 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Info;
 
+@OpenAPIDefinition(
+        info = @Info(
+                title = "Flight Search API",
+                version = "1.0.0",
+                description = "Bir uçuş arama uygulaması için backend API olarak geliştirildi",
+                termsOfService = "https://github/zehracakir",
+                contact = @io.swagger.v3.oas.annotations.info.Contact(
+                        name = "Zehra Çakır",
+                        url = "https://github/zehracakir",
+                        email = "flightsearchapi@gmail.com"
+                )
+        )
+)
 @RestController
 @RequestMapping("/ucuslar")
 public class UcuslarAPIController
@@ -72,9 +87,6 @@ public class UcuslarAPIController
          @RequestParam LocalDateTime kalkisTarih,
          @RequestParam(required = false) LocalDateTime donusTarih
  ) {
-     if (donusTarih != null) {
-         donusTarih = null;
-     }
 
      List<Ucuslar> ucuslar = ucuslarService.getUcusYonu(kalkisAlani, varisAlani, kalkisTarih, donusTarih);
 

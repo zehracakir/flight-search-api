@@ -24,7 +24,7 @@ public class ScheduledJob {
         this.restTemplate = restTemplate;
     }
 
-    @Scheduled(cron = "0 * * * * ?")
+    @Scheduled(cron = "0 0 * * * ?")
     public void runScheduledJob() {
         System.out.println("Zamanlanmış görev çalışıyor...");
         String mockApiUrl = "https://run.mocky.io/v3/1305924e-8c86-4759-acca-5620d6210252";

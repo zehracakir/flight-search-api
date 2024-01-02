@@ -18,6 +18,7 @@ public class UcuslarServiceImpl implements UcuslarService {
 
     @Override
     public String createUcuslar(Ucuslar ucuslar) {
+        System.out.println(ucuslar.toString());
         ObjectId objectId = new ObjectId();
         ucuslar.setId(objectId.toString());
         if (ucuslar.getDonusTarih() == null) {
