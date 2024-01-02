@@ -60,7 +60,9 @@ Belirtilen ID'ye sahip havaalanını siler.
 Anasayfa. Tüm kullanıcılara açıktır.
 
 ****
-
+### **API'ler İçin Postman Üzerinden Yapılan Test Sonuçları**
+![Collection Run Sonucu](images/apiTest.PNG)
+****
 ### **Güvenlik**
 
 - Basic Authentication kullanılmıştır.
