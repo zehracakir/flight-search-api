@@ -1,5 +1,5 @@
 spring:
   data:
     mongodb:
-      uri : mongodb://localhost:27017/flightsearch
-      database : flightsearch
+      uri : mongodb+srv://test:test@searchapi.n2eb8v2.mongodb.net/?retryWrites=true&w=majority
+      database: searchapia

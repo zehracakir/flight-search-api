@@ -12,10 +12,5 @@ public class UserController {
         return "Flight Search API Anasayfa, Hoşgeldiniz";
     }
 
-    @GetMapping("/admin")
-    public String admin() {
-        return "Admin login işlemi başarılı!, admin sayfası";
-    }
 
 }
-
